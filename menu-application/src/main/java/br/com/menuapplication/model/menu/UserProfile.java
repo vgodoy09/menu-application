@@ -33,17 +33,17 @@ public class UserProfile extends EntityDoman implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private int id;
-	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="user_id", insertable=true, updatable=false, referencedColumnName="id")
-	@JsonBackReference
-	private User user;
+//	@ManyToOne(fetch=FetchType.LAZY)
+//	@JoinColumn(name="user_id", insertable=true, updatable=false, referencedColumnName="id")
+//	@JsonBackReference
+//	private User user;
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="profile_id", insertable=true, updatable=false, referencedColumnName="id")
 	@JsonBackReference
 	private Profile profile;
 	
 	public UserProfile(User user, Profile profile) {
-		this.user = user;
+//		this.user = user;
 		this.profile = profile;
 	}
 	
@@ -53,13 +53,13 @@ public class UserProfile extends EntityDoman implements Serializable {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
-	}
+//	public User getUser() {
+//		return user;
+//	}
+//
+//	public void setUser(User user) {
+//		this.user = user;
+//	}
 
 	public Profile getProfile() {
 		return profile;
